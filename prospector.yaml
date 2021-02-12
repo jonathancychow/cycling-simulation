@@ -1,0 +1,13 @@
+ignore-patterns:
+  - _version.py
+
+ignore-paths:
+  - scripts
+  - .tox
+  - .github
+  - .venv
+  - ci
+  - versioneer.py
+  - dist
+  - build
+  - docs
