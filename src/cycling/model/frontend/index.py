@@ -12,7 +12,7 @@ from cycling.model.frontend.callbacks import baseline  # noqa
 from cycling.model.frontend.callbacks import experiment  # noqa
 
 app.layout = main_layout
-
+server = app.server
 
 # update page based on url
 @app.callback(

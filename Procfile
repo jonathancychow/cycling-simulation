@@ -1,0 +1,1 @@
+web: gunicorn src.cycling.model.frontend.index:server
