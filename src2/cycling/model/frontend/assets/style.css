@@ -1,0 +1,26 @@
+.selection_img {
+    height: 70vh;
+    object-fit: contain;
+    margin: 10px;
+}
+
+.nav_link {
+    color: #fff;
+}
+
+.nav_link:hover {
+    color: #d3d3d3;
+}
+
+.active {
+    color: #fff;
+    font-weight: 700;
+}
+
+.hide {
+    color: #ff9e31;
+}
+
+.bold {
+    font-weight: 700;
+}
