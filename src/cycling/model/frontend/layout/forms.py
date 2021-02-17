@@ -22,7 +22,7 @@ def rider_data_form(callback_suffix):
         dbc.FormGroup(
             children=[
                 dbc.Button(
-                    "More parameters",
+                    "More",
                     id=f"collapse_button_{callback_suffix}",
                     className="mb-3",
                     color="primary",
@@ -91,7 +91,7 @@ def rider_data_form(callback_suffix):
             dbc.FormGroup(
                 children=[
                     dbc.Button(
-                        "More parameters",
+                        "More",
                         id=f"collapse_button_bike_{callback_suffix}",
                         className="mb-3",
                         color="primary",
