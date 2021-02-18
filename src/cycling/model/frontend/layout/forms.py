@@ -7,6 +7,7 @@ def rider_data_form(callback_suffix):
     rider_select = dbc.Select(
         id=f"rider_select_{callback_suffix}",
         options=rider_options,
+        value="Sam"
     )
     rider_data = [
         dbc.FormGroup(
@@ -60,6 +61,7 @@ def rider_data_form(callback_suffix):
         bike_select = dbc.Select(
             id=f"bike_select_{suffix}",
             options=bike_options,
+            value="Light Bike"
         )
         return bike_select
 
@@ -133,6 +135,7 @@ def rider_data_form(callback_suffix):
     power_select = dbc.Select(
         id=f"power_select_{callback_suffix}",
         options=power_options,
+        value="Constant"
     )
     power_data = [
         dbc.FormGroup(
