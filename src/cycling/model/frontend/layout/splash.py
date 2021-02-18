@@ -20,11 +20,11 @@ splash_layout =[
         children=[
             html.Br(),
             html.P([
-                "Welcome! A simulation is an experiment done in computer, it could solve complex problems if it is set up correctly, and we could do repeatable controlled experiments in the virtual world.",
+                "Welcome! A simulation is like running an experiment, but inside a computer program. In a simulation, we can control everything, including the bike and rider we use, and even the weather! With a good setup, it can solve very difficult problems quickly, and we can run it again and again!",
                 html.Br(),
                 html.Br(),
-                "Behind the scenes, the computer model solves acceleration by balancing all the forces on the bike, it may takes the computer a few seconds to finish the calculation, just be patient and wait,",
-                "it is worth waiting for it as it will take a lot longer if we do those calculations by hand!",
+                "Behind the scenes, the computer model solves acceleration by balancing all the forces on the bike. It may takes the computer a few seconds to finish the calculation, so just be patient and wait. "
+                "It is worth waiting as it would take a lot longer if we do these calculations by hand!",
                 html.Br(),
                 html.Img(src="https://www.harriswestminstersixthform.org.uk/uploads/asset_image/2_259_l.jpg",
                          className="lead",
@@ -33,7 +33,7 @@ splash_layout =[
                                 'display': 'block'}
                          ),
                 html.Br(),
-                "If you are keen to do more experiments, for example make up your own bike or own track, click the following and explore the world of python in Jupyter Notebook.",
+                "If you are keen to try some advanced features, like customising your own bike or track, click the following and explore the world of Python in a Jupyter Notebook.",
                 html.Br()
             ],
                 className="lead",
