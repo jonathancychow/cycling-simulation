@@ -18,22 +18,34 @@ splash_layout =[
     ),
     dbc.Row(
         children=[
-            html.P("Welcome! A simulation is an experiment done in computer, it could solve complex problems if it is set up correctly, and we could do repeatable controlled experiments in the virtual world. "
-                  , className="lead", style={"text-align": "left"}
-                   ),
-            html.P(
-                "Behind the scenes, the computer model solves acceleration by balancing all the forces on the bike, it may takes the computer a few seconds to finish the calculation, just be patient and wait, "
-                "it is worth waiting for it as it will take a lot longer if we do those calculations by hand!"
-                , className="lead",
-                style={"text-align": "left"}
-                ),
-            html.P("If you are keen to do more experiments, for example make up your own bike or own track, click the following and explore the world of python.",
-                className="lead", style={"text-align": "left"})
+            html.Br(),
+            html.P([
+                "Welcome! A simulation is an experiment done in computer, it could solve complex problems if it is set up correctly, and we could do repeatable controlled experiments in the virtual world.",
+                html.Br(),
+                html.Br(),
+                "Behind the scenes, the computer model solves acceleration by balancing all the forces on the bike, it may takes the computer a few seconds to finish the calculation, just be patient and wait,",
+                "it is worth waiting for it as it will take a lot longer if we do those calculations by hand!",
+                html.Br(),
+                html.Img(src="https://www.harriswestminstersixthform.org.uk/uploads/asset_image/2_259_l.jpg",
+                         className="lead",
+                         style={'margin-left': 'auto',
+                                'margin-right': 'auto',
+                                'display': 'block'}
+                         ),
+                html.Br(),
+                "If you are keen to do more experiments, for example make up your own bike or own track, click the following and explore the world of python in Jupyter Notebook.",
+                html.Br()
+            ],
+                className="lead",
+                style={"text-align": "left",
+                       'word-wrap': 'break-word',
+                       }
+            ),
         ]
     ),
     dbc.Row(
         children=[
-            dbc.Col(dbc.Button("Explore with Python!", id="ittttttt", color="primary", size="lg", block=True,
+            dbc.Col(dbc.Button("Advanced - Explore with Python", id="notebook", color="primary", size="lg", block=True,
                                href='https://mybinder.org/v2/gh/jonathancychow/cycling-simulation/main?filepath=notebooks%2Fcycling_simulation.ipynb')),
         ]
     ),
