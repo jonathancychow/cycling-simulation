@@ -250,7 +250,7 @@ def update_table(baseline_data, experiment_data, data):
     else:
         style_data_conditional = []
 
-    unit = ['', '', '', u's', '']
+    unit = ['', '', '', u's', u'J']
     table = dash_table.DataTable(
         columns=[{"name": name,
                   "id": name,
