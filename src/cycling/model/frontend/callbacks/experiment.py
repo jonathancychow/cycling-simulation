@@ -1,6 +1,7 @@
 import dash_core_components as dcc
 import pandas as pd
 import dash_table
+from dash_table.Format import Format, Scheme, Symbol
 from dash.dependencies import Input, Output, State
 from cycling.model.frontend.app import app
 from cycling.model.frontend.plots.results import simulation_results_plot
@@ -249,8 +250,18 @@ def update_table(baseline_data, experiment_data, data):
     else:
         style_data_conditional = []
 
+    unit = ['', '', '', u's', u'J']
     table = dash_table.DataTable(
-        columns=[{"name": name, "id": name} for name in data.columns],
+        columns=[{"name": name,
+                  "id": name,
+                  "type": "numeric",
+                  "format": Format(precision=1,
+                                   scheme=Scheme.fixed,
+                                   symbol=Symbol.yes,
+                                   symbol_suffix=u
+                                   )
+                  } for name, u in zip(data.columns, unit)
+                 ],
         data=data.to_dict('records'),
         editable=True,
         style_as_list_view=True,

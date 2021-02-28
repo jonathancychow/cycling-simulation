@@ -48,12 +48,6 @@ def change_navbar(pathname):  # noqa
                     id='baseline-link',
                     href="baseline",
                     className='nav_link')),
-            dbc.Col(
-                dbc.NavLink(
-                    "Experiment",
-                    id='experiment-link',
-                    href="experiment",
-                    className='nav_link hide')),
         ]
     elif pathname == '/baseline':
         navbar_items = [
@@ -69,12 +63,6 @@ def change_navbar(pathname):  # noqa
                     id='baseline-link',
                     href="baseline",
                     className='nav_link active')),
-            dbc.Col(
-                dbc.NavLink(
-                    "Experiment",
-                    id='experiment-link',
-                    href="experiment",
-                    className='nav_link hide')),
         ]
     elif pathname == '/experiment':
         navbar_items = [
@@ -96,27 +84,6 @@ def change_navbar(pathname):  # noqa
                     id='experiment-link',
                     href="experiment",
                     className='nav_link active')),
-        ]
-    elif pathname == '/explore':
-        navbar_items = [
-            dbc.Col(
-                dbc.NavLink(
-                    "Stage",
-                    id='stage-link',
-                    href="stage",
-                    className='nav_link')),
-            dbc.Col(
-                dbc.NavLink(
-                    "Baseline",
-                    id='baseline-link',
-                    href="baseline",
-                    className='nav_link')),
-            dbc.Col(
-                dbc.NavLink(
-                    "Experiment",
-                    id='experiment-link',
-                    href="experiment",
-                    className='nav_link')),
         ]
     else:
         navbar_items = []

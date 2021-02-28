@@ -28,7 +28,7 @@ navbar = dbc.Navbar(
         dbc.NavbarToggler(id="navbar-toggler"),
         dbc.Collapse(nav_links, id="navbar-collapse", navbar=True),
     ],
-    color="#ff9e31",
+    color='#c0c0c0',#"#7a7a7a"
 )
 
 main_layout = html.Div(

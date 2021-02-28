@@ -7,11 +7,12 @@ def rider_data_form(callback_suffix):
     rider_select = dbc.Select(
         id=f"rider_select_{callback_suffix}",
         options=rider_options,
+        value="Sam"
     )
     rider_data = [
         dbc.FormGroup(
             children=[
-                dbc.Label("Weight (kg):"),
+                dbc.Label("Weight (30 - 100 kg):"),
                 dbc.Input(
                     id=f"rider_weight_{callback_suffix}",
                     type="number",
@@ -22,7 +23,7 @@ def rider_data_form(callback_suffix):
         dbc.FormGroup(
             children=[
                 dbc.Button(
-                    "More parameters",
+                    "More",
                     id=f"collapse_button_{callback_suffix}",
                     className="mb-3",
                     color="primary",
@@ -60,6 +61,7 @@ def rider_data_form(callback_suffix):
         bike_select = dbc.Select(
             id=f"bike_select_{suffix}",
             options=bike_options,
+            value="Light Bike"
         )
         return bike_select
 
@@ -70,17 +72,17 @@ def rider_data_form(callback_suffix):
         bike_data = [
             dbc.FormGroup(
                 children=[
-                    dbc.Label("Weight (kg):"),
+                    dbc.Label("Weight (5 - 20 kg):"),
                     dbc.Input(
                         id=f"bike_weight_{suffix}",
                         type="number",
-                        min=0,
+                        min=5,
                         max=20,
                         step=0.01),
                 ]),
             dbc.FormGroup(
                 children=[
-                    dbc.Label("Rolling resistance - Crr:"),
+                    dbc.Label("Rolling resistance:"),
                     dbc.Input(
                         id=f"bike_crr_{suffix}",
                         type="number",
@@ -91,7 +93,7 @@ def rider_data_form(callback_suffix):
             dbc.FormGroup(
                 children=[
                     dbc.Button(
-                        "More parameters",
+                        "More",
                         id=f"collapse_button_bike_{callback_suffix}",
                         className="mb-3",
                         color="primary",
@@ -100,21 +102,21 @@ def rider_data_form(callback_suffix):
                         dbc.Card(
                             dbc.FormGroup(
                                 children=[
-                                    dbc.Label("Rider and bike drag area - CdA:"),
+                                    dbc.Label("Rider and bike drag area:"),
                                     dbc.Input(
                                         id=f"bike_cda_{suffix}",
                                         type="number",
                                         min=0,
                                         max=1,
                                         step=0.01),
-                                    dbc.Label("Rider and bike drag area in climbing position - CdA:"),
+                                    dbc.Label("Rider and bike drag area in climbing position:"),
                                     dbc.Input(
                                         id=f"bike_cda_climbing_{suffix}",
                                         type="number",
                                         min=0,
                                         max=1,
                                         step=0.01),
-                                    dbc.Label("Climbing position gradient - (%):"),
+                                    dbc.Label("Climbing position gradient (%):"),
                                     dbc.Input(
                                         id=f"bike_gradient_climbing_{suffix}",
                                         type="number",
@@ -133,6 +135,7 @@ def rider_data_form(callback_suffix):
     power_select = dbc.Select(
         id=f"power_select_{callback_suffix}",
         options=power_options,
+        value="Constant"
     )
     power_data = [
         dbc.FormGroup(
