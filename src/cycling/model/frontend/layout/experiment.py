@@ -49,4 +49,20 @@ generate_experiment = [
 
 ]
 
-experiment_page_layout = experiment_naming + rider_form + generate_experiment
+header = [
+    dbc.Row(
+        [
+            dbc.Col(
+                [
+                    dbc.Label("Step 3 - Change a variable ", className="bold"),
+                    html.P("Change a variable, click on 'Generate experiment' and see if the result changes. "
+                           "If so, by how much? Is it expected? ", className="lead"),
+                ],
+                width="auto",
+            ),
+        ],
+        className='mb-3'
+    ),
+]
+
+experiment_page_layout = header + experiment_naming + rider_form + generate_experiment

@@ -1,6 +1,7 @@
 import dash_core_components as dcc
 import dash_bootstrap_components as dbc
 from cycling.model.frontend.layout.forms import rider_data_form
+import dash_html_components as html
 
 callback_suffix = 'baseline'
 
@@ -31,5 +32,20 @@ generate_baseline = [
         ],
         className='mt-3 mb-3'),
 ]
+header = [
+    dbc.Row(
+        [
+            dbc.Col(
+                [
+                    dbc.Label("Step 2 - Configure you bike and rider ", className="bold"),
+                    html.P("Click on 'More' to see more variables you could change. "
+                           "Once you have generated a baseline, click on 'Go to Experiment'.", className="lead"),
+                ],
+                width="auto",
+            ),
+        ],
+        className='mb-3'
+    ),
+]
 
-baseline_page_layout = rider_form + generate_baseline
+baseline_page_layout = header + rider_form + generate_baseline

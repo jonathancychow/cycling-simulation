@@ -156,7 +156,7 @@ def rider_data_form(callback_suffix):
             children=[
                 dbc.Col(
                     children=[
-                        dbc.Label("Rider:", className="bold"),
+                        dbc.Label("Rider:"),
                         rider_select
                     ],
                     md=3
@@ -172,7 +172,7 @@ def rider_data_form(callback_suffix):
             children=[
                 dbc.Col(
                     children=[
-                        dbc.Label("Bike:", className="bold"),
+                        dbc.Label("Bike:"),
                         get_bike_select(callback_suffix)
                     ],
                     md=3
@@ -188,7 +188,7 @@ def rider_data_form(callback_suffix):
             children=[
                 dbc.Col(
                     children=[
-                        dbc.Label("Power profile:", className="bold"),
+                        dbc.Label("Power profile:"),
                         power_select
                     ],
                     md=3
