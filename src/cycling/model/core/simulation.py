@@ -48,7 +48,7 @@ class Simulation:
         f_gravity = self.bike_1_total_mass * self.environment.gravity * np.sin(np.arctan(r_gradient))
         f_rolling = (self.bike_1.crr_front * self.bike_1_total_mass / 2
                      + self.bike_1.crr_rear * self.bike_1_total_mass / 2
-                     ) * np.cos(np.arctan(r_gradient))
+                     ) * self.environment.gravity * np.cos(np.arctan(r_gradient))
         g_long = 1 / self.bike_1_total_mass * (fx_tyre - f_drag - f_gravity - f_rolling)
         dvds = g_long / v
         dtds = 1 / v
