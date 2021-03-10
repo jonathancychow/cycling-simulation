@@ -1,5 +1,6 @@
 import dash_bootstrap_components as dbc
 from cycling.model.frontend.app import rider_options, bike_options, power_options
+import dash_html_components as html
 
 
 def rider_data_form(callback_suffix):
@@ -39,6 +40,10 @@ def rider_data_form(callback_suffix):
                                     min=50,
                                     max=500,
                                     step=1),
+                                html.Div([
+                                    html.A('Learn more',
+                                           href='https://sporttracks.mobi/blog/critical-power-training',
+                                           target='_blank')]),
                                 dbc.Label("Anaerobic work capacity - W' (J):"),
                                 dbc.Input(
                                     id=f"rider_w_prime_{callback_suffix}",
@@ -46,6 +51,10 @@ def rider_data_form(callback_suffix):
                                     min=10000,
                                     max=30000,
                                     step=10),
+                                html.Div([
+                                    html.A('Learn more',
+                                           href="https://pezcyclingnews.com/toolbox/the-anaerobic-w/",
+                                           target='_blank')]),
                             ]),
                     ),
                     id=f"collapse_{callback_suffix}",
@@ -82,16 +91,6 @@ def rider_data_form(callback_suffix):
                 ]),
             dbc.FormGroup(
                 children=[
-                    dbc.Label("Rolling resistance:"),
-                    dbc.Input(
-                        id=f"bike_crr_{suffix}",
-                        type="number",
-                        min=0,
-                        max=0.1,
-                        step=0.0001),
-                ]),
-            dbc.FormGroup(
-                children=[
                     dbc.Button(
                         "More",
                         id=f"collapse_button_bike_{callback_suffix}",
@@ -102,14 +101,29 @@ def rider_data_form(callback_suffix):
                         dbc.Card(
                             dbc.FormGroup(
                                 children=[
-                                    dbc.Label("Rider and bike drag area:"),
+                                    dbc.Label("Rolling resistance (-):"),
+                                    dbc.Input(
+                                        id=f"bike_crr_{suffix}",
+                                        type="number",
+                                        min=0,
+                                        max=0.1,
+                                        step=0.0001),
+                                    html.Div([
+                                        html.A('Learn more',
+                                                href='https://ridefar.info/bike/cycling-speed/rolling-resistance/',
+                                                target='_blank')]),
+                                    dbc.Label("Aerodynamics drag - CdA:"),
                                     dbc.Input(
                                         id=f"bike_cda_{suffix}",
                                         type="number",
                                         min=0,
                                         max=1,
                                         step=0.01),
-                                    dbc.Label("Rider and bike drag area in climbing position:"),
+                                    html.Div([
+                                        html.A('Learn more',
+                                                href='https://notio.ai/blogs/blog/what-is-cda-and-why-is-it-important-as-a-cyclist-to-measure-it',
+                                                target='_blank')]),
+                                    dbc.Label("Aerodynamics drag at climbing position - CdA:"),
                                     dbc.Input(
                                         id=f"bike_cda_climbing_{suffix}",
                                         type="number",
