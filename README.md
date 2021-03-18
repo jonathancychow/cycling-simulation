@@ -5,7 +5,7 @@
 Model to simulate performance for cycling time trial
 
 # Deployment
-The dashboard is hosted at Heroku, please see this [link](https://cycling-sim.herokuapp.com/).
+The dashboard is hosted at [Heroku](https://cycling-sim.herokuapp.com/) and [AWS](http://cycle.us-east-2.elasticbeanstalk.com/).
 
 The jupyter notebook is hosted at Binder, please see this [link](https://mybinder.org/v2/gh/jonathancychow/cycling-simulation/main?filepath=notebooks%2Fcycling_simulation.ipynb).
 
@@ -48,6 +48,11 @@ If your OS is Window
 ```
 .\.venv\Scripts\python -V
 ```
+Start the web server
+```
+tox -e serve
+```
+
 # Test
 ### Static code analysis - lint
 
