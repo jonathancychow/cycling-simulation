@@ -3,6 +3,7 @@ import dash_bootstrap_components as dbc
 import dash_html_components as html
 
 stage_option = [{"label": "Tour-de-France-2020---Stage-20-ITT", "value": "Tour-de-France-2020---Stage-20-ITT"},
+                {"label": "Tour-de-France-2020---Stage-20-ITT-Short", "value": "Tour-de-France-2020---Stage-20-ITT-Short"},
                 {"label": "Vuelta-España-2020---Stage-13", "value": "Vuelta-España-2020---Stage-13"}]
 
 stage_page_layout = [
