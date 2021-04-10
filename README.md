@@ -53,6 +53,16 @@ Start the web server
 tox -e serve
 ```
 
+### Start Jupyter Notebook
+```
+source .venv/bin/activate
+jupyter notebook
+```
+
+If you want to quickly interact with a pre-built Jupyter Notebook, you can click [here](https://mybinder.org/v2/gh/jonathancychow/cycling-simulation/main?filepath=notebooks%2Fcycling_simulation.ipynb), I have set it all up in MyBinder.
+
+A trim down notebook is set up for youngster to learn more about Python and simulation, see this [link](https://mybinder.org/v2/gh/jonathancychow/cycling-simulation/main?filepath=notebooks%2Fcycling_simulation_edu.ipynb).
+
 # Test
 ### Static code analysis - lint
 
